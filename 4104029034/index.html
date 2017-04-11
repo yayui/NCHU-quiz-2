@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小考</title>
+	<style>
+	  h2 { border-bottom: 1px solid black;}
+	</style>
+  </head>
+  <body>
+    <h2 id="bti">Web Programming</h2>
+	<p>
+      Content
+    </p>
+	<ul>
+	  <li id="h">HTML</li>
+	  <li id="c">CSS</li>
+	  <li>DOM</li>
+	  <li>JavaScript</li>
+	  <li id="j">JSP</li>
+	</ul>
+	<form>  
+      <input type="button" id="js_g"  value="以JS更改元素內容"  onClick="appendNode()"> 
+      <input type="button" id="jqr_g"  value="以jQuery更改CSS"  onClick="">  	 
+      <input type="button" id="ti_g"  value="更改標題"  onClick="btiGai()"> 	  
+    </form>
+	<script>
+	  function appendNode() {
+	    document.getElementById("h").innerHTML += "5";
+		document.getElementById("c").innerHTML += "3";
+        var objNode = document.getElementById("j");
+        var strText = " MySQL";
+        var objTextNode = document.createTextNode(strText);
+		objNode.appendChild(objTextNode);
+     }
+	  function btiGai() {
+        document.getElementById("bti").innerHTML += "_4104029034";
+      }
+	  var x = document.getElementById("bti");
+	  x.setAttribute("onmouseover","this.style.color='red',this.style.fontSize='large'");
+	  x.setAttribute("onmouseout", "this.style.color='initial',this.style.fontSize='initial'");
+	</script>
+  </body>
+</html>
